@@ -95,7 +95,7 @@ function install_dsc_rpm() {
   local chroot_dir=$1
   [[ -d "${chroot_dir}" ]] || { echo "[ERROR] directory not found: ${chroot_dir} (${BASH_SOURCE[0]##*/}:${LINENO})" >&2; return 1; }
 
-  run_in_target ${chroot_dir} yum install -y http://rpm.datastax.com/community/noarch/dsc1.1-1.1.9-1.noarch.rpm
+  run_in_target ${chroot_dir} yum install -y --disablerepo=updates http://rpm.datastax.com/community/noarch/dsc1.1-1.1.9-1.noarch.rpm
 }
 
 function configure_cassandra_jre() {
