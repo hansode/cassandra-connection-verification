@@ -13,6 +13,7 @@ function yum() {
 
 # Add installation packages ...
 addpkgs="
+ gcc-c++
 "
 
 if [[ -n "$(echo ${addpkgs})" ]]; then
