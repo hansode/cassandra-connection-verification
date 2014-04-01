@@ -14,6 +14,7 @@ function yum() {
 # Add installation packages ...
 addpkgs="
  gcc-c++
+ mysql-devel
 "
 
 if [[ -n "$(echo ${addpkgs})" ]]; then
